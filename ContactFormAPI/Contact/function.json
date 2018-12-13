@@ -20,9 +20,7 @@
       "type": "sendGrid",
       "name": "message",
       "apiKey": "SendGrid",
-      "to": "mike.pfeiffer@gmail.com",
-      "from": "mike.pfeiffer@gmail.com",
-      "subject": "testing from azure",
+      "to": "",
       "direction": "out"
     }    
   ]
