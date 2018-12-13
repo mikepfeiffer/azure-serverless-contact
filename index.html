@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Send us an email</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
+  <style>
+    body {
+      padding-top:40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="display-4 mb-4">Send us an email</h1>
+    <hr>
+    <div id="output"></div>
+    <form id="submitMessage">
+      <div class="form-group">
+        <input type="text" id="name" class="form-control" placeholder="Your first name">
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" class="form-control" placeholder="Your email">
+      </div>
+      <div class="form-group">
+        <textarea id="message" class="form-control" placeholder="Type your message..."></textarea>
+      </div>
+      <input type="submit" class="btn btn-secondary" value="Submit">
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('submitMessage').addEventListener('submit', submitMessage);
+
+    function processResponse(response) {
+      if (response.status === 200) {
+        output =
+          `
+        <div class="alert alert-success" role="alert">
+          Thanks, ${document.getElementById('name').value}! We'll be in touch soon!
+        </div>        
+        `;
+        document.getElementById('output').innerHTML = output;
+      } else {
+        output =
+          `
+        <div class="alert alert-danger" role="alert">
+          Oh no! Something went wrong :(
+        </div>        
+        `;
+        document.getElementById('output').innerHTML = output;
+      }
+    }
+
+    function submitMessage(e) {
+      e.preventDefault();
+
+      let name = document.getElementById('name').value;
+      let email = document.getElementById('email').value;
+      let message = document.getElementById('message').value;
+
+      fetch('https://sgfuncapp.azurewebsites.net/api/Contact', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message
+          })
+        })
+        .then((res) => processResponse(res))
+    }
+  </script>
+</body>
+
+</html>

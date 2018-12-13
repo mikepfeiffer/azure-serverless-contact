@@ -1,0 +1,29 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "sendGrid",
+      "name": "message",
+      "apiKey": "SendGrid",
+      "to": "mike.pfeiffer@gmail.com",
+      "from": "mike.pfeiffer@gmail.com",
+      "subject": "testing from azure",
+      "direction": "out"
+    }    
+  ]
+}
