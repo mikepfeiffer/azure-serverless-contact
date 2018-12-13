@@ -20,7 +20,7 @@
       "type": "sendGrid",
       "name": "message",
       "apiKey": "SendGrid",
-      "to": "",
+      "to": "<YOUR EMAIL ADDRESS>",
       "direction": "out"
     }    
   ]

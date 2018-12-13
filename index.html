@@ -64,7 +64,7 @@
       let email = document.getElementById('email').value;
       let message = document.getElementById('message').value;
 
-      fetch('https://sgfuncapp.azurewebsites.net/api/Contact', {
+      fetch('<YOUR FUNCTION URL>', {
           method: 'POST',
           headers: {
             'Accept': 'application/json, text/plain, */*',
