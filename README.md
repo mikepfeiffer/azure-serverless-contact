@@ -13,7 +13,7 @@ Eventually, I will include deployment automation for this project. For now, you 
 * Create an App Setting entry in your Function App called **SendGrid** that contains your SendGrid API key.
 * Deploy the **ContactFormAPI** in this repo to your Function App. You can do this easily using the steps outlined in [Deploy to Azure using Azure Functions](https://code.visualstudio.com/tutorials/functions-extension/getting-started).
 
-## Preview
+## App Preview
 ![alt text](https://user-images.githubusercontent.com/5126491/50303670-038ad800-044b-11e9-9488-04f94e2843a6.gif "README Image")
 
 ## App Info
