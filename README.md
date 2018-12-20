@@ -6,7 +6,7 @@ This demo application contains a static HTML contact page and a JavaScript-based
 
 ## Deployment Steps
 
-I plan on updating this project to automate the deployment. For now, you can follow these steps to get this application up and running.
+Eventually, I will include deployment automation for this project. For now, you can follow these high-level steps to manually deploy this application to Azure.
 
 * Create an Azure Storage account. Enable [static website hosting](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website) and upload the **index.html** file from the **www** folder of this repo.
 * [Create a SendGrid Account](https://docs.microsoft.com/en-us/azure/sendgrid-dotnet-how-to-send-email#create-a-sendgrid-account) in the Azure Portal
