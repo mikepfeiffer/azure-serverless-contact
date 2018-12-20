@@ -8,10 +8,10 @@ This demo application contains a static HTML contact page and a JavaScript-based
 
 I plan on updating this project to automate the deployment. For now, you can follow these steps to get this application up and running.
 
-* Create an Azure Storage account and enable [static website hosting](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website) and upload the index.html file from the www folder of this repo.
+* Create an Azure Storage account. Enable [static website hosting](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website) and upload the **index.html** file from the **www** folder of this repo.
 * [Create a SendGrid Account](https://docs.microsoft.com/en-us/azure/sendgrid-dotnet-how-to-send-email#create-a-sendgrid-account) in the Azure Portal
-* Create an App Setting entry in your Function App called "SendGrid" that contains your SendGrid API key.
-* Deploy the ContactFormAPI in this repo to your Function App using [VS Code](https://code.visualstudio.com/tutorials/functions-extension/getting-started).
+* Create an App Setting entry in your Function App called **SendGrid** that contains your SendGrid API key.
+* Deploy the **ContactFormAPI** in this repo to your Function App using [VS Code](https://code.visualstudio.com/tutorials/functions-extension/getting-started).
 
 ## App Info
 
