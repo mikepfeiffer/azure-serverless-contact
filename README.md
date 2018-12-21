@@ -6,7 +6,7 @@ This demo application contains a static HTML contact page and a JavaScript-based
 
 ## Deployment Steps
 
-Eventually, I will include deployment automation for this project. For now, you can follow these high-level steps to manually deploy this application to Azure.
+Eventually, I will include deployment automation instructions for this project. For now, you can follow these high-level steps to manually deploy this application to Azure.
 
 1. Create an Azure Function App using the steps outlined in [this guide](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function).
 2. Create an Azure Storage account and enable [static website hosting](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website). 
